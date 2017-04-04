@@ -1,7 +1,7 @@
 {
   "name": "@axetroy/roll",
   "version": "1.0.0",
-  "description": "",
+  "description": "Roll item from a given list with simple api.",
   "main": "./dist/roll.js",
   "scripts": {
     "test": "./node_modules/.bin/ava",

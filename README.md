@@ -8,7 +8,7 @@ Roll item from a given list with simple api.
 npm install @axetroy/roll
 ```
 
-or if you using **yarn**(recommend)
+or if you are using **yarn**(recommend)
 
 ```bash
 yarn add @axetroy/roll
@@ -37,7 +37,7 @@ console.log(result);
 add an item to roller.
 
 - item: any thing except **undefined** and **null**
-- rank: rank of this item. you can set any number >0, no need the make the in 10 total.
+- rank: rank of the item. you can set any number >0, no need the make them in 10 total.
 
 ### .roll(): any
 
