@@ -4,10 +4,10 @@
   "description": "Roll item from a given list with simple api.",
   "main": "./dist/roll.js",
   "scripts": {
-    "test": "./node_modules/.bin/ava",
+    "test": "ava",
     "build": "webpack --display-error-details --progress --colors",
     "watch": "webpack --display-error-details --progress --colors --watch",
-    "generate": "./node_modules/.bin/all-contributors generate",
+    "generate": "all-contributors generate",
     "deploy": "gh-pages -d ./dist"
   },
   "repository": {
