@@ -5,7 +5,7 @@
 import test from 'ava';
 import Roll from '../index';
 
-const MISTAKE = 0.01;
+const MISTAKE = 0.05;
 
 function diff(num1, num2) {
   return Math.abs(num1 - num2);
@@ -64,6 +64,46 @@ test('simple with random rank', t => {
     Apple: 0,
     Sydney: 0,
     Banana: 0
+  };
+
+  const loopTimes = 1000000;
+
+  for (let i = 0; i < loopTimes; i++) {
+    const result = random.roll();
+    if (result in resultTimes) {
+      resultTimes[result] += 1;
+    }
+  }
+
+  let totalRank = 0;
+  items.forEach(item => totalRank += item.rank);
+
+  items.forEach(v => {
+    t.is(
+      diff(resultTimes[v.item], loopTimes * v.rank / totalRank) <
+        loopTimes * MISTAKE,
+      true
+    );
+  });
+});
+
+test('simple with random order', t => {
+  const random = new Roll();
+
+  const items = [
+    { item: 'Banana', rank: 6 },
+    { item: 'Apple', rank: 1 },
+    { item: 'Sydney', rank: 2 },
+    { item: 'Orange', rank: 1 }
+  ];
+
+  items.forEach(v => random.add(v.item, v.rank));
+
+  const resultTimes = {
+    Apple: 0,
+    Sydney: 0,
+    Banana: 0,
+    Orange:0
   };
 
   const loopTimes = 1000000;
