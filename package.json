@@ -7,6 +7,7 @@
     "test": "./node_modules/.bin/ava",
     "build": "webpack --display-error-details --progress --colors",
     "watch": "webpack --display-error-details --progress --colors --watch",
+    "generate": "./node_modules/.bin/all-contributors generate",
     "deploy": "gh-pages -d ./dist"
   },
   "repository": {
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/axetroy/roll#readme",
   "devDependencies": {
+    "all-contributors-cli": "^4.0.1",
     "ava": "^0.18.2",
     "babel-core": "^6.24.0",
     "babel-loader": "^6.4.1",
