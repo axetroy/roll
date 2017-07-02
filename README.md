@@ -1,5 +1,7 @@
 # Roll
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/axetroy/roll.svg)](https://greenkeeper.io/)
+
 Roll item from a given list with simple api.
 
 ## Installation
